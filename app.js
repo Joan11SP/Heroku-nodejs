@@ -9,6 +9,7 @@ var connection = require('./config_connection/connection');
 app.use(body_parser.json());
 app.use(body_parser.urlencoded({extended:true}));
 
+app.use(express.static(__dirname + '/views/'))
 //see petitions 
 app.use(morgan('dev'));
 
