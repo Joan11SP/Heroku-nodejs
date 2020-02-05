@@ -18,28 +18,20 @@
         </div>
         <br>
         <div class="p-3 w-25">
-            <form method="POST" action="/users/create_account">
+            <form method="POST" action="/pais/create">
                 <div class="form-group">
                     <div class="card">
                         <div class="card-body">
-                            <label>Tipo de Documento</label>
-                            <select class="form-control form-control-lg" name="type_document">
-                                <option value="CI">CI</option>
-                                <option value="RUC">RUC</option>
-                                <option value="PS">PS</option>
-                            </select>
-                            <label>identificacion</label>
-                            <input type="text" class="form-control" name="identification">
-                            <label>Nombres</label>
-                            <input type="text" class="form-control" name="names">
-                            <label>Correo</label>
-                            <input type="text" class="form-control" name="email">
-                            <label>Razón Social</label>
-                            <input type="text" class="form-control" name="reason_social">
-                            <label>Telefonos</label>
-                            <input type="text" class="form-control" name="phones">
-                            <label>Dirección</label>
-                            <input type="text" class="form-control" name="direction"><br>
+                            <label>Nombre</label>
+                            <input type="text" class="form-control" name="nombre">
+                            <label>Numero de Habitantes</label>
+                            <input type="text" class="form-control" name="nroHabitantes">
+                            <label>Moneda</label>
+                            <input type="text" class="form-control" name="moneda">
+                            <label>Idiona</label>
+                            <input type="text" class="form-control" name="idioma">
+                            <label>Superficie</label>
+                            <input type="text" class="form-control" name="superficie">
                             <input type="submit" class="btn btn-primary btn-block" value="Aceptar">
                         </div>
                     </div>
