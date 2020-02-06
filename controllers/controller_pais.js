@@ -25,7 +25,7 @@ router.get('/', (req, res) => {
             console.error(err)
             throw err;
         }
-        //res.status(200).json(rest)
+        res.status(200).json(rest)
     })
 
 }).post('/delete', (req, res) => {
