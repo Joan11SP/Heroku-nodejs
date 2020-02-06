@@ -11,32 +11,35 @@
 </head>
 
 <body>
-        <div class="p-3 w-25">
-            <form method="POST" action="/pais/create">
-                <div class="form-group">
-                    <div class="card">
-                        <div class="card-body">
-                            <label>Nombre</label>
-                            <input type="text" class="form-control" name="nombre">
-                            <label>Numero de Habitantes</label>
-                            <input type="text" class="form-control" name="nroHabitantes">
-                            <label>Moneda</label>
-                            <input type="text" class="form-control" name="moneda">
-                            <label>Idioma</label>
-                            <input type="text" class="form-control" name="idioma">
-                            <label>Superficie</label>
-                            <input type="text" class="form-control" name="superficie"><br>
-                            <input type="submit" class="btn btn-dark btn-block" value="Aceptar">
-                        </div>
+    <div class="p-3 w-25">
+        <form id="form_pais" method="POST" action="/pais/create">
+            <div class="form-group">
+                <div class="card">
+                    <div class="card-body">
+                        <label>Nombre</label>
+                        <input type="text" class="form-control" name="nombre">
+                        <label>Numero de Habitantes</label>
+                        <input type="text" class="form-control" name="nroHabitantes">
+                        <label>Moneda</label>
+                        <input type="text" class="form-control" name="moneda">
+                        <label>Idioma</label>
+                        <input type="text" class="form-control" name="idioma">
+                        <label>Superficie</label>
+                        <input type="text" class="form-control" name="superficie"><br>
+                        <input type="submit" class="btn btn-dark btn-block" onclick="limpiarFormulario()" value="Aceptar">
                     </div>
                 </div>
-            </form>
-        </div>
+            </div>
+        </form>
+    </div>
 
-        <div>
-            <script>
-            </script>
-        </div>
+    <div>
+        <script>
+            function limpiarFormulario() {
+                document.getElementById("form_pais").reset();
+            }
+        </script>
+    </div>
 </body>
 
 </html>
