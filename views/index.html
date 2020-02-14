@@ -32,13 +32,33 @@
             </div>
         </form>
     </div>
-
     <div>
-        <script>
-            function limpiarFormulario() {
-                document.getElementById("form_pais").reset();
-            }
-        </script>
+    </div>
+    <div>
+        <form method="GET" action="/pais/">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre del Pais</th>
+                    <th scope="col">Numero de Habitantes</th>
+                    <th scope="col">Idioma</th>
+                    <th scope="col">Superficie</th>
+                    <th scope="col">Numero de Habitantes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <script>
+                        for (const iterator of Pais) {
+                            <th>{iterator}</th>
+                        }
+                    </script>
+                </tr>
+            </tbody>
+        </table>
+        </form>
     </div>
 </body>
 

@@ -9,6 +9,7 @@ router.get('/', (req, res) => {
             throw err;
         }
         res.status(200).json(docs)
+        
     })
 }).post('/create', (req, res) => {
     var body = req.body;

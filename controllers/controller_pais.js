@@ -53,18 +53,6 @@ router.get('/', (req, res) => {
         });
 
     })
-}).post('/suma', (req, res) => {
-    var num1 = parseInt(req.body.num1);
-    var num2 = parseInt(req.body.num2);
-    const iterator =num1;
-    for (iterator ;iterator>2 ;iterator--) {
-        if (num1 % 1 === 0 && num1 % num1 === 0) {
-            res.status(200).json({ mensaje: 'Es primo ', num1 })
-        }
-        res.status(200).json({ mensaje: 'No es primo ' })
-    }
-    
-
 })
 
 module.exports = router;
