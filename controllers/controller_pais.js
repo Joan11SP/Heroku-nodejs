@@ -29,7 +29,7 @@ router.get('/', (req, res) => {
     })
 
 }).post('/delete', (req, res) => {
-    Pais.remove({ nombre: req.body.nombre }, (err, docs) => {
+    Pais.deleteOne({ nombre: req.body.nombre }, (err, docs) => {
         if (err) {
             console.error(err)
             throw err;
