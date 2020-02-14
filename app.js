@@ -17,7 +17,6 @@ app.use(function(req, res, next) {
       res.header('Access-Control-Allow-Methods', 'GET, PATCH, PUT, POST, DELETE, OPTIONS');
       res.send();
   });
-});
   
 app.use(body_parser.json());
 app.use(body_parser.urlencoded({extended:true}));
