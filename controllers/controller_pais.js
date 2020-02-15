@@ -1,6 +1,7 @@
 var Pais = require('../models/pais'),
     provincia = require('../models/provincia'),
-    express = require('express'),
+    pregunta = require('../models/preguntas')
+express = require('express'),
     router = express.Router();
 
 router.get('/', (req, res) => {
@@ -53,6 +54,34 @@ router.get('/', (req, res) => {
         });
 
     })
+}).post('/preguntas', (req, res) => {
+    pregunta.find({}, (err, docs) => {
+        if (err) {
+            console.error(err)
+            throw err;
+        }
+        res.status(200).json(docs)
+    })
+}).post('/save_preguntas', (req, res) => {
+    pregunta.updateMany(
+        {
+            pregunta: req.body.pregunta
+        },
+        {
+            $set: {
+                pregunta: req.body.pregunta,
+                opcion: req.body.opcion,
+                conosco:req.body.conosco,
+                uso:req.body.uso
+            }
+        }
+        , (err, docs) => {
+            if (err) {
+                console.error(err)
+                throw err;
+            }
+            res.status(200).json(docs)
+        })
 })
 
 module.exports = router;
