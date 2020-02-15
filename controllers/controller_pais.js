@@ -54,7 +54,7 @@ router.get('/', (req, res) => {
         });
 
     })
-}).post('/preguntas', (req, res) => {
+}).get('/preguntas', (req, res) => {
     pregunta.find({}, (err, docs) => {
         if (err) {
             console.error(err)
